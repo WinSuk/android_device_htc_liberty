@@ -1,0 +1,27 @@
+#!/system/bin/sh
+
+# Trackball wake script for HTC Liberty running CM9 or CM10
+# onoff is backwards, so it can be directly echo'd into the idc file
+
+onoff="0"
+
+checkfile=`grep device.internal /system/usr/idc/curcial-oj.idc`
+if [ "$checkfile" = "device.internal = 0" ]
+then
+# Trackball wake is already enabled, disable it
+onoff="1"
+fi
+
+# Compound all the root commands together so only one su request pops up
+su -c "mount -o rw,remount /system /system && echo \"cursor.mode = navigation\ncursor.orientationAware = 1\n\ndevice.internal = $onoff\" > /system/usr/idc/curcial-oj.idc && chmod 0644 /system/usr/idc/curcial-oj.idc"
+
+
+if [ "$onoff" = "1" ]
+then
+enabledstring="DISABLED"
+else
+enabledstring="ENABLED"
+fi
+echo "Trackball wake has been $enabledstring, please reboot."
+
+exit 0
