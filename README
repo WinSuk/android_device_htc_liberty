@@ -1,7 +1,6 @@
 Device configuration for the HTC Liberty (aka HTC Aria/Gratia)
 
 Copyright (C) 2011 The CyanogenMod Project
-Copyright (C) 2012 LibertyICS
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -31,7 +30,7 @@ Copyright (C) 2012 LibertyICS
 
   Do repo init & sync
 
-  $ repo init -u git://github.com/LibertyICS/android.git -b ics
+  $ repo init -u git://github.com/WinSuk/android.git -b ics
   $ repo sync -j20
 
   Setup vendor
