@@ -1,0 +1,2 @@
+libcamera.so has been hex edited to change "msm7k" to "msm7x27", so it accepts what's now in ro.board.platform.
+0x12424 to 0x1242A
