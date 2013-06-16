@@ -117,7 +117,7 @@ PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 # Copy prebuilt wifi module when it isn't being built with the kernel
-ifneq ($(FULL_KERNEL_BUILD),true)
+ifeq ($(FULL_KERNEL_BUILD),false)
 PRODUCT_COPY_FILES += \
     device/htc/liberty/prebuilt/lib/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
 endif
