@@ -136,6 +136,6 @@ $(call inherit-product, device/htc/msm7x27-common/msm7x27.mk)
 
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 
-PRODUCT_NAME := generic_liberty
+PRODUCT_NAME := full_liberty
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_DEVICE := liberty
