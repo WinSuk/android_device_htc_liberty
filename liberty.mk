@@ -36,6 +36,34 @@ PRODUCT_COPY_FILES += \
     device/htc/liberty/init.liberty.rc:root/init.liberty.rc \
     device/htc/liberty/ueventd.liberty.rc:root/ueventd.liberty.rc
 
+ifneq ($(BOARD_RECOVERY_OFFMODE_CHARGING),false)
+# Offmode charging images
+PRODUCT_COPY_FILES += \
+    device/htc/liberty/prebuilt/offmode_charging_images/battery_error.png:recovery/root/res/offmode_charging_images/battery_error.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00031.png:recovery/root/res/offmode_charging_images/charging_full_00031.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00035.png:recovery/root/res/offmode_charging_images/charging_full_00035.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00041.png:recovery/root/res/offmode_charging_images/charging_full_00041.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00043.png:recovery/root/res/offmode_charging_images/charging_full_00043.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00047.png:recovery/root/res/offmode_charging_images/charging_full_00047.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00049.png:recovery/root/res/offmode_charging_images/charging_full_00049.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00053.png:recovery/root/res/offmode_charging_images/charging_full_00053.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00055.png:recovery/root/res/offmode_charging_images/charging_full_00055.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00059.png:recovery/root/res/offmode_charging_images/charging_full_00059.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00061.png:recovery/root/res/offmode_charging_images/charging_full_00061.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00065.png:recovery/root/res/offmode_charging_images/charging_full_00065.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00067.png:recovery/root/res/offmode_charging_images/charging_full_00067.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00071.png:recovery/root/res/offmode_charging_images/charging_full_00071.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00073.png:recovery/root/res/offmode_charging_images/charging_full_00073.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00077.png:recovery/root/res/offmode_charging_images/charging_full_00077.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00079.png:recovery/root/res/offmode_charging_images/charging_full_00079.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00083.png:recovery/root/res/offmode_charging_images/charging_full_00083.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00085.png:recovery/root/res/offmode_charging_images/charging_full_00085.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00089.png:recovery/root/res/offmode_charging_images/charging_full_00089.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00091.png:recovery/root/res/offmode_charging_images/charging_full_00091.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00095.png:recovery/root/res/offmode_charging_images/charging_full_00095.png \
+    device/htc/liberty/prebuilt/offmode_charging_images/charging_full_00099.png:recovery/root/res/offmode_charging_images/charging_full_00099.png
+endif
+
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
     ro.ril.enable.dtm=1 \
